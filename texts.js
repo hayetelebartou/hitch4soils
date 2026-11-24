@@ -1,0 +1,262 @@
+/* ===== TOUS LES TEXTES DU SITE (FR + EN) =====
+   Pour changer un texte : modifier la ligne, dans fr ET dans en.
+   Les paragraphes d'un long texte sont séparés par \n\n */
+var T = {
+  fr:{
+    /* Menu et pied de page */
+    nav_home:"Accueil", nav_projects:"Projets soutenus", nav_map:"Carte",
+    doc_home:"Hitch4Soils – Genève → Pacifique, au kilomètre", doc_projects:"Les projets soutenus – Hitch4Soils", doc_map:"Notre route – Hitch4Soils",
+    footer:"Hitch4Soils, Genève → Pacifique, 2027. Textes, chiffres et photos des projets : SOILS.",
+
+    /* Accueil : haut de page */
+    eyebrow:"Genève → Pacifique",
+    title:"Un centime <span>par kilomètre.</span>",
+    lead:"Nous sommes deux amis, Max et Barth. Nous traversons l'Eurasie de Genève au Pacifique, en auto-stop. Arrivée prévue fin avril ou début mai 2027. Chaque kilomètre parcouru aide des communautés agricoles du Liban.",
+    cta_pledge:"Faire une promesse", cta_how:"Comment ça marche",
+    how_title:"Le principe",
+    how_intro:"Pas besoin de payer maintenant. Vous promettez un petit montant par kilomètre, et vous payez à la fin, seulement pour la distance réellement parcourue.",
+    s1_t:"Vous promettez", s1_p:"Vous choisissez de compter depuis le jour de votre promesse, ou depuis le tout début de notre voyage à Genève.",
+    s2_t:"On voyage", s2_p:"Par voie terrestre depuis Genève. Les vols ne comptent pas.",
+    s3_t:"Vous payez à l'arrivée", s3_p:"Vous recevez un mail avec le total final du don et un lien de paiement, en euros.",
+
+    /* Calculateur */
+    calc_title:"Faites le calcul",
+    calc_intro:"Essayez avec vos chiffres, dans la monnaie de votre choix. Nous pensons faire près de 25 000 km en tout (notre voyage n'est pas en ligne droite et peut changer). Vous pouvez ainsi voir ce que ça donne si vous donnez pour tout le voyage.",
+    calc_currency:"Monnaie",
+    calc_rate:"Centimes par km", calc_km:"Nombre de km", calc_cap:"Plafond", calc_nocap:"Pas de plafond",
+    calc_note:"Le paiement final se fera en euros, sur les kilomètres réellement parcourus. Le montant en euros sera calculé au taux du jour du paiement.",
+    r_base:"Pour %km% km à %rate% ct/km, vous donneriez :",
+    r_capped:"Plafonné à %cap%. Sans plafond : %raw%.",
+    r_eur:"Soit environ %eur% à payer en euros (taux indicatif du %date%).",
+    r_eur_same:"À payer en euros.",
+    stats_line:"Déjà %n% promesses, soit environ %eur% à ce jour.",
+
+    /* Accueil : SOILS */
+    soils_title:"SOILS, l'association que nous soutenons",
+    soils_p1:"SOILS (Permaculture Association Lebanon) est une ONG de terrain basée dans le district de Jezzine, dans le sud du Liban. Pionnière de la permaculture et de l'agroécologie au Liban depuis 2014, elle forme des agriculteurs, des réfugiés et des étudiants en agronomie, et aide à créer des jardins communautaires.",
+    soils_p2:"Depuis 2026, elle apporte une aide financière et en nature à des fermes, des apiculteurs, une pépinière, un jardin communautaire et une épicerie solidaire touchés par la guerre. Elle les aide à reprendre leur production, remettre en état de petites infrastructures, acheter des intrants agricoles et couvrir des frais de main-d'œuvre.",
+    soils_ctx:"La guerre ne détruit pas seulement des maisons. Elle touche aussi la terre et ceux qui la cultivent. Au printemps 2026, le ministre libanais de l'Agriculture a dit qu'environ 80 % des agriculteurs vivant au sud du Litani ont dû quitter leurs terres. Après des mois sans revenu, beaucoup ne peuvent plus recommencer.",
+    soils_why_t:"Pourquoi cette association ?",
+    soils_why:"Nous voulions soutenir une association qui nous ressemble à tous les deux. Barth a de la famille au Liban et s'inquiète beaucoup pour la situation du pays. Max est ingénieur agronome et défend avec conviction le renforcement des communautés agricoles par des pratiques agricoles durables. SOILS est exactement ce que nous cherchions.",
+    soils_for_t:"Qui soutiendront vos dons ?",
+    soils_for_intro:"Les dons vont d'abord à cinq projets soutenus par SOILS :",
+    soils_for_1:"Akil Garden, une petite ferme familiale déplacée deux fois par la guerre",
+    soils_for_2:"Ahmad, un apiculteur qui a perdu environ 80 ruches",
+    soils_for_3:"La pépinière de Malak, détruite en 2026",
+    soils_for_4:"Nohyee el Ard, le premier jardin communautaire du Liban, à Saïda",
+    soils_for_5:"Dikken el Mazraa, une épicerie solidaire à Beyrouth",
+    soils_for_rest:"Le reste va à d'autres partenaires de SOILS qui ont des besoins urgents.",
+    soils_btn_projects:"Voir les projets soutenus", link_soils:"Découvrir SOILS",
+    soils_logo_alt:"Logo de SOILS, Permaculture Association Lebanon (ouvre leur site)",
+    duo_alt:"Max et Barth en voyage",
+    strip1_alt:"Les jardins de Nohyee el Ard, à Saïda, vus d'en haut",
+    strip2_alt:"Des ruches dans un verger",
+    strip3_alt:"Une serre de légumes à Akil Garden",
+
+    /* Accueil : compteur, promesse, don libre */
+    count_text:"Vous pouvez voir les kilomètres déjà parcourus sur la carte.",
+    count_updated:"Dernière mise à jour :",
+    count_map_btn:"Voir la carte",
+    pledge_title:"Faire une promesse",
+    pledge_p1:"Remplissez le formulaire : votre nom, votre mail, le départ du comptage, le montant par km et un plafond si vous le souhaitez.",
+    pledge_p2:"Le formulaire sert à enregistrer votre promesse de don, pour nous permettre de réunir toutes les promesses. Vous ne verserez l'argent qu'une seule fois, après notre arrivée.",
+    pledge_btn:"Ouvrir le formulaire dans un nouvel onglet",
+    pledge_privacy:"Vos données (nom, mail et montant promis) servent uniquement à vous envoyer le lien de paiement et des nouvelles du projet. Elles ne sont ni vendues, ni partagées avec d'autres personnes ou entreprises. Elles sont gardées jusqu'à la fin du projet, puis effacées. Pour les faire effacer plus tôt, écrivez-nous sur Instagram.",
+    free_title:"Ou donner un montant libre",
+    free_p:"Vous préférez donner une somme simple, sans calcul au kilomètre ? Vous pouvez le faire dès maintenant sur la cagnotte, en euros.",
+    free_btn:"Faire un don libre",
+
+    /* FAQ */
+    faq_title:"Questions fréquentes",
+    q8:"Qui êtes-vous, et pourquoi ce voyage ?", a8:"Nous sommes deux amis, Max et Barth. Nous traversons l'Eurasie par la terre, de Genève jusqu'au Pacifique. Nous voyageons en auto-stop, et parfois en bus ou en train si l'auto-stop devient trop dangereux. Arrivée prévue fin avril ou début mai 2027. Notre but principal : rencontrer des gens de milieux très différents et écouter leurs histoires. En route, nous avons vu que notre voyage attire beaucoup l'attention. Alors autant s'en servir pour quelque chose d'utile.",
+    q9:"Pourquoi avoir choisi ce projet ?", a9:"SOILS mène plusieurs projets, dont des actions de dépollution de terres touchées par la guerre. Nous avons choisi son aide d'urgence aux fermes et aux jardins communautaires du Sud, parce qu'elle permet de contribuer à quelque chose de concret, avec un effet visible sur la vie des gens. Barth a une grand-mère libanaise et a toujours été très lié au pays. Il aime le Liban et ses habitants comme chacun aime le sien, et la guerre, avec son impact sur un pays déjà en grande difficulté, l'a naturellement touché. Max est ingénieur agronome, spécialisé dans les productions horticoles durables. Ses principales aspirations dans ce domaine sont de renforcer les communautés agricoles, de promouvoir des pratiques agricoles écologiquement durables et d'améliorer l'accès à une alimentation locale, saine et abordable. SOILS réunit pleinement tous ces objectifs.",
+    q10:"Pourquoi prendre l'avion, si le voyage se fait en auto-stop ?", a10:"Premièrement, une frontière impossible à franchir par la terre, et deuxièmement, des conditions météo dangereuses qui rendent l'auto-stop impossible.",
+    q11:"Et si le voyage s'arrête avant le Pacifique ?", a11:"Vous ne payez que pour les kilomètres réellement parcourus jusqu'à l'arrêt, selon le départ du comptage que vous avez choisi. Nous vous enverrons alors le lien de paiement.",
+    q12:"Puis-je donner directement à l'association ?", a12:"Oui, vous pouvez contacter SOILS directement via son site. Votre don ne sera alors pas compté dans notre total, et nous ne pourrons pas le suivre.",
+    q1:"Quels kilomètres comptent ?", a1:"Les kilomètres parcourus par voie terrestre (auto-stop, bus, train, bateau) depuis Genève. Les vols ne comptent pas.",
+    q2:"Que se passe-t-il si je mets un plafond ?", a2:"Vous ne paierez jamais plus que ce montant. Vous pouvez aussi choisir de ne pas en mettre.",
+    q3:"Quand dois-je payer ?", a3:"Une seule fois, à notre arrivée, avec un lien envoyé par mail et le calcul final.",
+    q7:"À partir de quand les kilomètres comptent-ils pour moi ?", a7:"Vous choisissez : depuis le jour de votre promesse (les km déjà parcourus avant ne comptent pas), ou depuis le tout début à Genève (tous les km comptent).",
+    q6:"Pourquoi le paiement se fait-il en euros ?", a6:"La plateforme de paiement n'accepte que les euros. Le calculateur vous aide à estimer votre don dans votre monnaie, mais le paiement final sera converti en euros.",
+    q4:"Et si je ne peux finalement pas payer ?", a4:"Ce n'est pas un contrat, mais une promesse entre proches. Nous enverrons deux rappels, puis nous laisserons tomber.",
+    q5:"Tout l'argent va-t-il à l'association ?", a5:"Nous transférons directement à SOILS tout ce que nous recevons, hors éventuels frais de la plateforme de paiement. Pour l'instant, la plateforme de don (memorable.me) ne prend aucun frais de don, et c'est en grande partie pour cela que nous l'avons choisie. Si leur politique devait changer, ce qui est peu probable, ces frais seraient déduits du don.",
+
+    /* Accueil : contact */
+    contact_title:"Liens et questions",
+    contact_p:"Pour en savoir plus, écrivez-nous directement sur Instagram : @maxandbarth.",
+    link_pot:"Aller à la cagnotte", link_insta:"Nous écrire sur Instagram",
+
+    /* Page Projets soutenus */
+    pp_title:"Les projets que vous soutenez",
+    pp_lead:"Pourquoi nous récoltons des fonds, qui est SOILS, et les cinq projets qui recevront les dons en priorité.",
+    why_title:"Pourquoi nous récoltons des fonds",
+    why_text:"La guerre ne détruit pas seulement des maisons et des infrastructures. Elle menace aussi la terre, les moyens de subsistance et les systèmes alimentaires locaux dont les communautés dépendent pour survivre et se reconstruire.\n\nLes offensives israéliennes répétées contre le Liban en 2024 et en 2026 ont causé des dégâts considérables, en particulier dans le secteur agricole. Selon le Conseil national de la recherche scientifique (CNRS), plus de 56 000 hectares de terres agricoles du sud du Liban ont subi des pertes de production rien qu'en 2024, soit environ 22 % des terres cultivées du pays.\n\nAu printemps 2026, le ministre libanais de l'Agriculture a annoncé qu'environ 80 % des agriculteurs vivant au sud du Litani avaient dû abandonner leurs terres. Ceux qui ont pu rester ont perdu tout ou partie de leurs marchés, et ceux qui reviennent doivent maintenant relancer leur production et remettre en état des infrastructures endommagées. Après des mois sans revenu, beaucoup n'ont tout simplement pas les moyens de préparer une nouvelle saison.\n\nLes conséquences dépassent largement les agriculteurs eux-mêmes. Quand la production agricole s'arrête, des communautés entières perdent leurs revenus, leur accès à une alimentation fraîche et saine, et les réseaux locaux qui les font vivre.\n\nNous partons pour un voyage par la route jusqu'à la côte Pacifique. À travers ce voyage, nous voulons récolter des fonds pour les personnes au Liban qui continuent à prendre soin de la terre, à cultiver des aliments, à produire du miel et à faire vivre des espaces communautaires malgré des difficultés énormes.\n\nNous nous associons à SOILS Permaculture Association, une ONG de terrain basée dans le district de Jezzine, dans le sud du Liban, qui soutient des acteurs locaux touchés directement ou indirectement par la guerre. Grâce à une aide financière et en nature, ainsi qu'à des formations, SOILS les aide à reprendre leur production, remettre en état de petites infrastructures, acheter des intrants agricoles, couvrir des frais de main-d'œuvre et garder l'accès à une alimentation saine.\n\nLes dons récoltés iront en priorité aux agriculteurs, producteurs et initiatives communautaires présentés ci-dessous, ainsi qu'à d'autres partenaires dans le besoin urgent. Chaque contribution peut aider quelqu'un à recommencer à cultiver, produire et reconstruire.",
+    about_title:"À propos de SOILS",
+    about_text:"SOILS est un pionnier de la permaculture et de l'agroécologie au Liban, où l'association a introduit ces concepts en 2014. Elle forme des agriculteurs, des réfugiés et des étudiants en agronomie à la gestion durable des terres, et elle produit des supports pédagogiques accessibles en arabe. Elle aide aussi à concevoir des jardins communautaires et accompagne les agriculteurs dans leur transition vers l'agroécologie.\n\nDepuis le début de la crise socio-économique de 2019, SOILS s'est de plus en plus concentrée sur le renforcement des capacités des communautés à produire localement leurs intrants agricoles, notamment du compost de qualité.\n\nAprès l'offensive israélienne de 2024, SOILS a commencé à coordonner un groupe d'échange de savoirs sur la bioremédiation, dans le but de développer un projet pilote de restauration des terres agricoles contaminées par la guerre.\n\nEn 2026, dans le prolongement de ces efforts, SOILS a commencé à apporter une aide financière et en nature, ainsi qu'un renforcement des capacités, à des partenaires locaux qui s'efforcent de maintenir la production alimentaire et les moyens de subsistance malgré la crise.",
+    who_title:"Qui vos dons soutiennent",
+    src_text:"Texte rédigé par l'association SOILS, traduit de l'anglais.",
+    src_home:"Texte établi d'après les informations fournies par SOILS.",
+    more:"Lire la suite",
+    gal_own:"Les ruches d'Ahmad", gal_war:"Dégâts de la guerre", gal_place:"Le lieu", gal_goods:"Les produits",
+
+    /* Projet : Akil Garden */
+    akil_t:"Akil Garden – une petite ferme agroécologique",
+    akil_s:"Un jardin familial de 6 000 m², dans le sud du Liban, qui associe arbres fruitiers, légumes de saison et herbes. Déplacé deux fois par la guerre, Akil a perdu ses poules et toute sa saison d'été, et veut remettre son jardin en production.",
+    akil_f:"Akil Garden est un jardin familial de 6 000 m², situé dans le sud du Liban. Il associe des arbres fruitiers, des légumes de saison et des herbes. Akil élevait aussi des poules et produisait son propre lombricompost. Ces activités ont d'abord été interrompues par la guerre de 2024, quand Akil a dû fuir sa maison.\n\nAvant la guerre, le jardin vendait chaque semaine des paniers de légumes à des clients locaux et accueillait parfois des familles pour des visites et des activités d'agritourisme.\n\nSOILS collabore avec Akil Garden depuis 2018. Elle l'a aidé à créer des planches de culture permanentes et enrichies sur un sol pauvre, et à diversifier la production, dans le cadre d'une formation en agroécologie pour un groupe de participants du sud du Liban. Depuis, SOILS a gardé des liens étroits avec Akil, et le jardin a accueilli plusieurs autres formations en agroécologie.\n\nEn 2026, Akil a été déplacé une seconde fois à cause de la nouvelle offensive israélienne. Il a perdu ses poules et toute sa saison de production d'été, ce qui fragilise encore les activités du jardin et ses revenus. De retour chez lui, Akil est déterminé à recommencer, à reconstruire ses activités et à remettre le jardin en production.\n\nSoutenir Akil, c'est l'aider à remettre en état sa petite ferme, à retrouver une partie de ses revenus perdus et à continuer de développer un jardin diversifié, qui contribue à la production alimentaire locale tout en servant d'exemple concret d'agriculture agroécologique.",
+    akil1:"Le jardin d'Akil", akil2:"Des choux et des plantes aromatiques", akil3:"Dans la serre", akil4:"Une chérimole, dans la serre",
+
+    /* Projet : Ahmad */
+    ahmad_t:"Ahmad, apiculteur – protéger les abeilles dans le sud du Liban",
+    ahmad_s:"Apiculteur depuis plus de 20 ans à Burj Al-Shemali, Ahmad n'a plus pu accéder à son rucher de Majdal Zoun depuis le début de la guerre en 2024. Il a perdu quatre saisons de miel et environ 80 ruches.",
+    ahmad_f:"Ahmad vient de Burj Al-Shemali, dans le sud du Liban, et travaille dans l'apiculture depuis plus de 20 ans. Pour lui, l'apiculture n'est pas seulement un métier : c'est une passion et un engagement de toute une vie, qui l'a aussi aidé à traverser les difficultés et les crises de la région.\n\nDepuis le début de la guerre en 2024, l'apiculture a été gravement touchée, notamment parce qu'Ahmad n'a pas pu accéder à son rucher de Majdal Zoun pour inspecter ses abeilles et s'en occuper correctement. Il a ainsi perdu quatre saisons de production de miel consécutives, environ 80 ruches et, selon les estimations, 60 % de sa production de miel.\n\nLa pollution de l'environnement, qui touche les fleurs, les habitats des abeilles et les sources d'eau, ainsi que des explosions près du rucher, ont causé d'autres dégâts. Environ 60 colonies ont quitté leurs ruches, et quelque 150 kilos de miel stocké ont été détruits par une explosion près du rucher et du local de stockage.\n\nAhmad a aussi de grandes difficultés pour déplacer ses abeilles, après l'été, vers des zones plus en altitude dans le sud du Liban. Il doit maintenant les installer dans des endroits plus sûrs, plus loin de la zone de conflit. La guerre pèse lourdement sur les apiculteurs : les dettes s'accumulent et il devient de plus en plus difficile d'entretenir et de développer leur activité.\n\nMalgré tout, Ahmad reste attaché à son métier et espère recevoir l'aide nécessaire pour protéger ses abeilles, relancer sa production et faire vivre l'apiculture dans le sud du Liban.\n\nEn plus d'être un apiculteur expérimenté, Ahmad est aussi formateur en apiculture. Il s'engage pour soutenir et développer la filière dans le sud du Liban en partageant son savoir et son expérience avec d'autres apiculteurs, pour les aider à améliorer leurs pratiques, à renforcer leurs compétences et à promouvoir une apiculture durable dans la région.\n\nSoutenir Ahmad, c'est aider à protéger des colonies d'abeilles, à relancer la production de miel et à préserver un savoir-faire précieux dans la région.",
+    ahmad1:"Des ruches dans un verger", ahmad2:"Un rucher au milieu de la végétation",
+    ahmad3:"Ruches brisées et tuiles éparpillées", ahmad4:"Du matériel d'apiculture entassé dans un local", ahmad5:"Des cadres de ruche dans les décombres", ahmad6:"Des ruches au milieu des gravats",
+
+    /* Projet : Malak */
+    malak_t:"Pépinière de Malak – aider une jeune entrepreneuse à recommencer",
+    malak_s:"Malak dirige une petite pépinière dans le district de Tyr. Elle a été détruite lors de l'offensive de 2026. Malak est déterminée à recommencer et a besoin d'une serre et d'un système d'irrigation.",
+    malak_f:"La pépinière de Malak est une petite entreprise créée et dirigée par une jeune femme dans le district de Tyr, dans le sud du Liban. Avant la guerre, elle vendait des plantes d'intérieur ainsi qu'une grande variété d'arbres fruitiers adaptés au climat local.\n\nLa pépinière a été détruite pendant l'offensive israélienne de 2026. Malgré le chagrin d'avoir perdu son activité, Malak est déterminée à recommencer.\n\nElle a besoin d'aide pour installer une serre et un système d'irrigation, afin de pouvoir reprendre la multiplication et la vente de plantes.\n\nContribuer à la pépinière de Malak, c'est aider une jeune entrepreneuse locale à reconstruire son activité, à retrouver ses moyens de subsistance et à redonner ses plantes à la communauté.",
+    malak1:"Des arbres et des plantes en pots", malak2:"Des plantes d'intérieur et des fleurs", malak3:"Plantes chargées dans une camionnette",
+
+    /* Projet : Nohyee el Ard */
+    nohyee_t:"Nohyee el Ard – un jardin communautaire à Saïda",
+    nohyee_s:"Premier jardin communautaire du Liban, fondé en 2020 dans un ancien verger de Saïda. Il rassemble aujourd'hui environ 150 personnes autour d'une culture agroécologique.",
+    nohyee_f:"Nohyee el Ard est le premier jardin communautaire du Liban, fondé en 2020. Parti de huit membres seulement, il est devenu en six ans une communauté d'environ 150 personnes.\n\nLes membres cultivent leur propre nourriture selon des principes agroécologiques et gèrent et entretiennent ensemble le jardin, un espace ouvert, naturel et productif. Le jardin accueille des habitants de Saïda et des visiteurs de tout le Liban, intéressés par la permaculture, la protection des terres, l'agroécologie, les initiatives citoyennes et les coopératives sociales.\n\nInstallé dans un ancien verger au cœur de Saïda, le jardin couvre environ 16 000 m². On y trouve des arbres fruitiers, une forêt urbaine, des cultures de légumes, une production de semences anciennes, de l'apiculture et du miel, ainsi que des jardins aromatiques.\n\nLe site offre aussi plusieurs espaces ouverts, utilisés pour des activités publiques, des marchés de producteurs, des initiatives éducatives et culturelles et des événements communautaires.\n\nUn thème central des activités du jardin est la préservation de la terre et la possibilité de vivre en équilibre et en harmonie avec elle. Nohyee el Ard est aussi devenu un lieu de mobilisation pour protéger la nature, les espaces publics, le patrimoine culturel et l'agriculture à Saïda. Un exemple : sa campagne pour protéger les anciens vergers de la ville des projets immobiliers.\n\nSoutenir Nohyee el Ard, c'est investir dans bien plus que la production de nourriture. C'est aider à préserver un espace vert unique en ville, à renforcer les liens entre les gens et à garder vivant un lieu où l'on peut apprendre, échanger des savoirs et agir ensemble pour protéger l'environnement.",
+    nohyee1:"Un panier de nèfles du Japon", nohyee2:"Les planches de culture, au coucher du soleil", nohyee3:"Le jardin vu d'en haut", nohyee4:"Un marché de producteurs dans le jardin",
+
+    /* Projet : Dikken el Mazraa */
+    dikken_t:"Dikken el Mazraa – une épicerie solidaire",
+    dikken_s:"Fondée à Beyrouth en 2020, cette épicerie solidaire achète directement à de petits producteurs et fournit des paniers à des familles déplacées. Les dons l'aident à continuer.",
+    dikken_f:"Dikken el Mazraa est un projet d'épicerie solidaire fondé à Beyrouth en 2020, en pleine crise économique du Liban. Son but était d'explorer des alternatives à la hausse des prix et à la baisse de l'accès à des produits abordables et de qualité.\n\nL'épicerie s'approvisionne en grande partie auprès de producteurs locaux qui suivent des pratiques durables. Elle applique aussi un système de prix progressifs, qui adapte les prix à la situation socio-économique des clients, pour rendre des produits de bonne qualité accessibles à un plus grand nombre.\n\nPendant les guerres de 2024 à 2026, Dikken el Mazraa a soutenu à la fois des agriculteurs et des familles déplacées. Elle a acheté des produits sains directement auprès de petits agriculteurs et producteurs de confiance dans tout le Liban, et les a acheminés vers des familles déplacées, sous forme de paniers alimentaires sains adaptés à la taille du foyer, et vers des cuisines sociales, qui préparent des repas pour des familles déplacées.\n\nMalgré une demande qui augmente, les dons ont ralenti ces derniers mois. Certaines familles déplacées sont rentrées chez elles ou se sont installées ailleurs, mais beaucoup restent à Beyrouth, ayant perdu leurs sources de revenus, et continuent de dépendre d'un soutien extérieur. En même temps, les producteurs locaux peinent à vendre leurs produits sur un marché de plus en plus déprimé.\n\nLes dons permettront à Dikken el Mazraa de continuer à acheter des produits frais à de petits producteurs locaux et de les mettre à disposition des familles dans le besoin.\n\nSoutenir Dikken, c'est répondre à deux besoins à la fois : faire vivre les agriculteurs locaux et garantir aux familles dans le besoin l'accès à une alimentation saine et produite localement.",
+    dikken1:"Des paniers de produits locaux", dikken2:"Les rayons de l'épicerie", dikken3:"Le contenu d'un panier, avec ses producteurs",
+
+    /* Page Carte */
+    map_title:"Notre route",
+    map_lead:"La carte montre les étapes de notre voyage. Elle est mise à jour de temps en temps, jamais en direct.",
+    map_open:"Ouvrir la carte en grand",
+    map_note:"Si la carte ne s'affiche pas ici, utilisez le bouton ci-dessus.",
+    map_frame:"Carte de notre route"
+  },
+
+  en:{
+    nav_home:"Home", nav_projects:"Supported projects", nav_map:"Map",
+    doc_home:"Hitch4Soils – Geneva → Pacific, by the kilometre", doc_projects:"The supported projects – Hitch4Soils", doc_map:"Our route – Hitch4Soils",
+    footer:"Hitch4Soils, Geneva → Pacific, 2027. Project texts, figures and photos: SOILS.",
+
+    eyebrow:"Geneva → Pacific",
+    title:"One cent <span>per kilometre.</span>",
+    lead:"We are two friends, Max and Barth. We are crossing Eurasia from Geneva to the Pacific, by hitchhiking. We expect to arrive in late April or early May 2027. Every kilometre we travel helps farming communities in Lebanon.",
+    cta_pledge:"Make a pledge", cta_how:"How it works",
+    how_title:"The idea",
+    how_intro:"No need to pay now. You pledge a small amount per kilometre, and you pay at the end, only for the distance actually travelled.",
+    s1_t:"You pledge", s1_p:"You choose to count from the day of your pledge, or from the very start of our trip in Geneva.",
+    s2_t:"We travel", s2_p:"Overland from Geneva. Flights don't count.",
+    s3_t:"You pay on arrival", s3_p:"You get an email with the final donation total and a payment link, in euros.",
+
+    calc_title:"Do the maths",
+    calc_intro:"Try it with your own numbers, in the currency of your choice. We think we will travel close to 25,000 km in total (our trip is not a straight line and may change). So you can see what it gives if you donate for the whole trip.",
+    calc_currency:"Currency",
+    calc_rate:"Cents per km", calc_km:"Number of km", calc_cap:"Cap", calc_nocap:"No cap",
+    calc_note:"The final payment will be in euros, based on the kilometres actually travelled. The amount in euros will be calculated at the exchange rate on the day of payment.",
+    r_base:"For %km% km at %rate% ct/km, you would give:",
+    r_capped:"Capped at %cap%. Without a cap: %raw%.",
+    r_eur:"That is about %eur% to pay in euros (indicative rate of %date%).",
+    r_eur_same:"To be paid in euros.",
+    stats_line:"%n% pledges so far, about %eur% to date.",
+
+    soils_title:"SOILS, the association we support",
+    soils_p1:"SOILS (Permaculture Association Lebanon) is a grassroots NGO based in the Jezzine district of South Lebanon. A pioneer of permaculture and agroecology in Lebanon since 2014, it trains farmers, refugees and agricultural students, and helps set up community gardens.",
+    soils_p2:"Since 2026, it has been providing financial and in-kind support to farms, beekeepers, a plant nursery, a community garden and a solidarity grocery affected by the war. It helps them restart production, rehabilitate small infrastructure, buy agricultural inputs and cover labour costs.",
+    soils_ctx:"War does not only destroy homes. It also hits the land and the people who farm it. In spring 2026, Lebanon's Minister of Agriculture said that around 80% of farmers living south of the Litani River had to leave their land. After months without income, many can no longer afford to start again.",
+    soils_why_t:"Why this association?",
+    soils_why:"We wanted the association we support to reflect what matters to both of us. Barth has family in Lebanon and is deeply concerned about the situation in the country. Max is an agricultural engineer and strongly advocates for empowering farming communities through sustainable farming practices. SOILS is exactly what we were looking for.",
+    soils_for_t:"Who will your donations support?",
+    soils_for_intro:"Donations go first to five projects supported by SOILS:",
+    soils_for_1:"Akil Garden, a small family farm displaced twice by the war",
+    soils_for_2:"Ahmad, a beekeeper who lost around 80 hives",
+    soils_for_3:"Malak's Nursery, destroyed in 2026",
+    soils_for_4:"Nohyee el Ard, Lebanon's first community garden, in Saida",
+    soils_for_5:"Dikken el Mazraa, a solidarity grocery in Beirut",
+    soils_for_rest:"The rest goes to other SOILS partners with urgent needs.",
+    soils_btn_projects:"See the supported projects", link_soils:"Discover SOILS",
+    soils_logo_alt:"SOILS logo, Permaculture Association Lebanon (opens their site)",
+    duo_alt:"Max and Barth on the road",
+    strip1_alt:"The Nohyee el Ard gardens in Saida, seen from above",
+    strip2_alt:"Beehives in an orchard",
+    strip3_alt:"A vegetable greenhouse at Akil Garden",
+
+    count_text:"You can see the kilometres travelled so far on the map.",
+    count_updated:"Last updated:",
+    count_map_btn:"See the map",
+    pledge_title:"Make a pledge",
+    pledge_p1:"Fill in the form: your name, your email, where the counting starts, the amount per km and a cap if you like.",
+    pledge_p2:"The form is used to record your pledge, so we can gather all the promises in one place. You will only pay once, after we arrive.",
+    pledge_btn:"Open the form in a new tab",
+    pledge_privacy:"Your data (name, email and pledged amount) is only used to send you the payment link and news about the project. It is never sold or shared with other people or companies. It is kept until the end of the project, then deleted. To have it deleted earlier, write to us on Instagram.",
+    free_title:"Or give a free amount",
+    free_p:"Prefer to give a simple amount, without the per-km calculation? You can do it right now on the fundraiser, in euros.",
+    free_btn:"Make a one-time gift",
+
+    faq_title:"Frequently asked questions",
+    q8:"Who are you, and why this trip?", a8:"We are two friends, Max and Barth. We are crossing Eurasia overland, from Geneva to the Pacific. We travel by hitchhiking, and sometimes by bus or train if hitchhiking becomes too dangerous. We expect to arrive in late April or early May 2027. Our main goal is to meet people from very different backgrounds and listen to their stories. Along the way we saw that our trip draws a lot of attention, so we might as well use it for something useful.",
+    q9:"Why did you choose this project?", a9:"SOILS runs several projects, including work on cleaning land affected by the war. We chose its emergency support for farms and community gardens in the South, because it lets us contribute to something concrete, with a visible effect on people's lives. Barth has a Lebanese grandmother and has always been close to the country. He loves Lebanon and its people the way anyone loves their own, and the war, with its impact on a country already in great difficulty, naturally affected him. Max is an agricultural engineer and specialized in sustainable horticultural productions. His main aspirations in this field are empowering farming communities, promoting ecologically sustainable farming practices and improving access to local, healthy and affordable food. SOILS completely encompasses all those goals.",
+    q10:"Why fly, if the trip is by hitchhiking?", a10:"Firstly, a border that cannot be crossed overland, and secondly, dangerous weather conditions that make hitchhiking unfeasible.",
+    q11:"What if the trip stops before the Pacific?", a11:"You only pay for the kilometres actually travelled until the stop, based on the counting start you chose. We will then send you the payment link.",
+    q12:"Can I give directly to the association?", a12:"Yes, you can contact SOILS directly through its website. Your gift will then not count in our total, and we will not be able to track it.",
+    q1:"Which kilometres count?", a1:"Kilometres travelled overland (hitchhiking, bus, train, boat) from Geneva. Flights don't count.",
+    q2:"What if I set a cap?", a2:"You will never pay more than that amount. You can also choose not to set one.",
+    q3:"When do I pay?", a3:"Once, when we arrive, with a link sent by email and the final calculation.",
+    q7:"From when do the kilometres count for me?", a7:"You choose: from the day of your pledge (kilometres already travelled before that don't count), or from the very start in Geneva (all kilometres count).",
+    q6:"Why is the payment in euros?", a6:"The payment platform only accepts euros. The calculator helps you estimate your gift in your own currency, but the final payment will be converted to euros.",
+    q4:"What if I finally can't pay?", a4:"It's not a contract, just a promise between friends. We'll send two reminders, then let it go.",
+    q5:"Does all the money go to the association?", a5:"We transfer everything we receive directly to SOILS, minus any potential payment platform fees. Currently, the donation platform (memorable.me) does not have any donation fees. This is in big part why we chose it. In the unlikely event their policy might change, that fee would be subtracted from the donation.",
+
+    contact_title:"Links and questions",
+    contact_p:"For more information, contact us directly on Instagram: @maxandbarth.",
+    link_pot:"Go to the fundraiser", link_insta:"Message us on Instagram",
+
+    pp_title:"The projects you support",
+    pp_lead:"Why we are raising funds, who SOILS is, and the five projects that will receive the donations first.",
+    why_title:"Why we are raising funds",
+    why_text:"War does not only destroy homes and infrastructure. It also threatens the land, livelihoods and local food systems that communities depend on to survive and rebuild.\n\nThe repeated Israeli offensives against Lebanon in 2024 and 2026 have caused extensive damage, particularly to the agricultural sector. According to the National Council for Scientific Research (CNRS), more than 56,000 hectares of agricultural production area in South Lebanon were affected by production losses in 2024 alone - roughly 22% of Lebanon's cultivated land.\n\nIn Spring 2026, Lebanon's Minister of Agriculture announced that around 80% of farmers living south of the Litani River had been forced to abandon their land. Those who managed to stay lost all or part of their markets, while farmers returning to their land now face the difficult task of restarting production and rehabilitating damaged infrastructure. After months without income, many simply lack the resources needed to prepare for a new growing season.\n\nThe consequences extend far beyond individual farmers. When agricultural production is disrupted, entire communities lose livelihoods, access to fresh and healthy food, and the local networks that sustain them.\n\nWe are setting out on a road trip to the Pacific coast. Through this journey, we want to raise funds for the people in Lebanon who continue to care for the land, grow food, produce honey, and nurture community spaces despite the enormous challenges they face.\n\nWe are joining forces with SOILS Permaculture Association, a grassroots NGO based in the Jezzine district of South Lebanon, which has been supporting local actors directly or indirectly affected by the war. Through financial and in-kind assistance, as well as capacity building, SOILS helps them resume production, rehabilitate small infrastructure, purchase agricultural inputs, cover labour costs and maintain access to healthy food.\n\nThe donations raised through this initiative will primarily support the local farmers, producers and community initiatives featured below, as well as other partners facing urgent needs. Every contribution can help someone get back to growing, producing, and rebuilding.",
+    about_title:"About SOILS",
+    about_text:"SOILS is a grassroots pioneer in permaculture and agroecology training in Lebanon, having introduced these concepts in 2014. The organization trains farmers, refugees and agricultural students in sustainable land stewardship and develops accessible educational materials in Arabic. It also supports the design of community gardens and helps farmers transition towards agroecological practices.\n\nSince the beginning of Lebanon's socio-economic crisis in 2019, SOILS has increasingly focused on strengthening community capacities to produce local agricultural inputs, particularly high-quality compost.\n\nFollowing the Israeli offensive of 2024, SOILS began coordinating a knowledge-sharing group on bioremediation, with the aim of developing a pilot project to restore agricultural land contaminated by the war.\n\nIn 2026, building on these efforts, SOILS started providing financial and in-kind assistance, alongside capacity building, to local partners working to sustain food production and livelihoods in the face of the ongoing crisis.",
+    who_title:"Who your donations will support",
+    src_text:"Text written by the association SOILS.",
+    src_home:"Text based on information provided by SOILS.",
+    more:"Read more",
+    gal_own:"Ahmad's hives", gal_war:"Damage from the war", gal_place:"The place", gal_goods:"The products",
+
+    akil_t:"Akil Garden – a small-scale agroecological farm",
+    akil_s:"A 6,000 m² homestead garden in South Lebanon that combines fruit trees, seasonal vegetables and herbs. Displaced twice by the war, Akil lost his chickens and his whole summer season, and wants to bring the garden back to production.",
+    akil_f:"Akil Garden is a 6,000 m² homestead garden. Located in South Lebanon, it combines fruit trees, with seasonal vegetables and herbs. Akil also used to raise chickens and produce his own vermicompost. These activities were first disrupted during the 2024 war, when Akil was forced to flee his home.\n\nBefore the war, the garden sold weekly vegetable baskets to local customers and occasionally welcomed families for visits and agritourism activities.\n\nSOILS began collaborating with Akil Garden in 2018, helping establish enriched permanent vegetable beds on poor soil and diversify production as part of an agroecology training for a group of participants from South Lebanon. Since then, SOILS has maintained a close relationship with Akil, and the garden has hosted several other agroecology trainings.\n\nIn 2026, Akil was displaced for a second time as a result of the renewed Israeli offensive. He lost his chickens and the entire summer production season, further undermining the garden's activities and his livelihood. Now back home, Akil is determined to start again, rebuild his activities and bring the garden back to production.\n\nSupporting Akil means helping him restore his small-scale farm, recover part of his lost livelihood and continue developing a diversified garden that contributes to local food production while serving as a practical example of agroecological farming.",
+    akil1:"Akil's garden", akil2:"Cabbages and aromatic plants", akil3:"Inside the greenhouse", akil4:"A cherimoya fruit, in the greenhouse",
+
+    ahmad_t:"Beekeeper Ahmad – protecting bees and sustaining beekeeping in South Lebanon",
+    ahmad_s:"A beekeeper for over 20 years in Burj Al-Shemali, Ahmad has been unable to reach his apiary in Majdal Zoun since the war began in 2024. He has lost four honey seasons and around 80 hives.",
+    ahmad_f:"Ahmad is from Burj Al-Shemali, South Lebanon, and has been working in beekeeping for over 20 years. Beekeeping is not just his profession; it is his passion and a lifelong commitment that has also helped him cope with the difficult circumstances and crises in the region.\n\nSince the beginning of the war in 2024, beekeeping has been severely affected, particularly because Ahmad has been unable to access his apiary in Majdal Zoun to inspect and properly care for his bees. As a result, he has lost four consecutive honey production seasons, around 80 hives and an estimated 60% in honey production.\n\nEnvironmental pollution affecting flowers, bee habitats and water sources, together with explosions near the apiary, has caused further damage. Approximately 60 bee colonies have abandoned their hives, and around 150 kilograms of stored honey were destroyed due to an explosion near the apiary and honey storage facility.\n\nAhmad also faces serious difficulties relocating his bees after the summer season to higher-altitude areas in South Lebanon. He now needs to move them to safer locations farther away from the conflict zone. The war has placed a heavy financial burden on beekeepers, causing debts to accumulate and making it increasingly difficult to maintain and develop their businesses.\n\nDespite these challenges, Ahmad remains committed to his profession and hopes to receive the necessary support to protect his bees, restore production and sustain beekeeping in South Lebanon.\n\nIn addition to being an experienced beekeeper, Ahmad is also a beekeeping trainer. He actively works to support and develop the sector in South Lebanon by sharing his knowledge and experience with other beekeepers, helping them improve their practices, strengthen their skills and promote sustainable beekeeping in the region.\n\nSupporting Ahmad will help protect bee colonies, restore honey production and preserve valuable beekeeping knowledge in the region.",
+    ahmad1:"Beehives in an orchard", ahmad2:"An apiary among the vegetation",
+    ahmad3:"Broken hives and scattered tiles", ahmad4:"Beekeeping equipment piled up in a shed", ahmad5:"Hive frames in the rubble", ahmad6:"Hives among the debris",
+
+    malak_t:"Malak's Nursery – helping a young entrepreneur start again",
+    malak_s:"Malak runs a small plant nursery in the Tyre district. It was destroyed during the 2026 offensive. Malak is determined to start again and needs a greenhouse and an irrigation system.",
+    malak_f:"Malak's Nursery is a small business established and run by a young woman in the Tyre district of South Lebanon. Before the war, the nursery sold houseplants as well as a wide variety of fruit trees adapted to the local climate.\n\nThe nursery was destroyed during the Israeli offensive of 2026. Despite the heartbreak of losing her business, Malak is determined to start again.\n\nShe needs support to install a greenhouse and an irrigation system, allowing her to resume propagating and selling plants.\n\nA contribution to Malak's Nursery will help a young local entrepreneur rebuild her business, regain her livelihood and bring her plants back to the community.",
+    malak1:"Trees and potted plants", malak2:"Houseplants and flowers", malak3:"Plants loaded in a van",
+
+    nohyee_t:"Nohyee el Ard Community Garden – growing food and community in Saida",
+    nohyee_s:"Lebanon's first community garden, founded in 2020 in an old orchard in Saida. It now brings together around 150 people around agroecological growing.",
+    nohyee_f:"Nohyee el Ard is Lebanon's first community garden, founded in 2020. What began with just eight members has grown over the past six years into a community of around 150 people.\n\nMembers grow their own food using agroecological principles and collectively manage and maintain the garden as an open, natural and productive space. The garden welcomes residents of Saida and visitors from across Lebanon interested in permaculture, land protection, agroecology, grassroots initiatives and social cooperatives.\n\nLocated in an ancient orchard in the heart of Saida, the garden covers approximately 16,000 m². It includes fruit trees, an urban forest, vegetable production, heirloom seed production, beekeeping and honey production, as well as aromatic gardens.\n\nThe site also offers a variety of open spaces used for public activities, farmers' markets, educational and cultural initiatives, and community events.\n\nA central theme explored through the garden's activities is the stewardship of the land and the possibility of living in balance and harmony with the earth. Nohyee el Ard has also become a hub for advocacy initiatives aimed at protecting nature, public spaces, cultural heritage and agriculture in Saida. One example is its campaign to protect the city's ancient orchards from real estate development projects.\n\nSupporting Nohyee el Ard means investing in more than food production. It means helping preserve a unique green space in the city, strengthen community ties, and keep alive a place where people can learn, exchange knowledge and take collective action to protect their environment.",
+    nohyee1:"A basket of loquats", nohyee2:"The growing beds at sunset", nohyee3:"The garden seen from above", nohyee4:"A farmers' market in the garden",
+
+    dikken_t:"Dikken el Mazraa Solidarity Grocery – connecting local producers with families in need",
+    dikken_s:"Founded in Beirut in 2020, this solidarity grocery buys directly from small producers and supplies food baskets to displaced families. Donations help it carry on.",
+    dikken_f:"Dikken el Mazraa is a solidarity grocery project founded in Beirut in 2020, in the midst of Lebanon's economic crisis. Its aim was to explore alternatives to rising prices and declining access to affordable, quality goods.\n\nThe grocery sources most of its products from local producers who follow sustainable practices. It also applies a progressive pricing system, adjusting prices according to customers' socio-economic circumstances to make good-quality products accessible to a wider range of people.\n\nDuring the wars of 2024–2026, Dikken el Mazraa has worked to support both farmers and displaced families. It purchased healthy produce directly from trusted small-scale farmers and producers across Lebanon and channeled these products to displaced families, through healthy food baskets adapted to household size, and to social kitchens, preparing meals for displaced families.\n\nDespite growing demand, donations have slowed in recent months. While some displaced families have returned home or relocated elsewhere, many remain in Beirut, having lost their sources of income and continuing to rely on external support. At the same time, local producers are struggling to sell their goods in an increasingly depressed market.\n\nOngoing donations will help Dikken el Mazraa continue purchasing fresh produce from small-scale local producers and making it available to families in need.\n\nSupporting Dikken means addressing two needs at once: sustaining local farmers and ensuring that families in need can access healthy, locally produced food.",
+    dikken1:"Baskets of local produce", dikken2:"The grocery's shelves", dikken3:"Inside a basket, with its producers",
+
+    map_title:"Our route",
+    map_lead:"The map shows the stages of our trip. It is updated from time to time, never live.",
+    map_open:"Open the map full size",
+    map_note:"If the map does not show up here, use the button above.",
+    map_frame:"Map of our route"
+  }
+};

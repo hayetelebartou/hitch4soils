@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hitch4Soils – Geneva → Pacific, by the kilometre</title>
+<meta name="description" content="We are two friends hitchhiking from Geneva to the Pacific. Every kilometre we travel helps farming communities in Lebanon.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hitch4Soils">
+<meta property="og:title" content="Hitch4Soils – 1 cent per kilometre for the farmers of South Lebanon">
+<meta property="og:description" content="Two friends hitchhike from Geneva to the Pacific. Every kilometre helps farms and gardens in Lebanon.">
+<meta property="og:image" content="https://hitch4soils.netlify.app/img/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-title="doc_home">
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">Hitch4Soils</a>
+    <nav class="nav" aria-label="Menu">
+      <a href="index.html" aria-current="page" data-i18n="nav_home"></a>
+      <a href="projets.html" data-i18n="nav_projects"></a>
+      <a href="carte.html" data-i18n="nav_map"></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow" data-i18n="eyebrow"></span>
+    <h1 data-i18n-html="title"></h1>
+    <p class="lead" data-i18n="lead"></p>
+    <div class="btns">
+      <a class="btn primary" href="#promesse" data-i18n="cta_pledge"></a>
+      <a class="btn ghost" href="#concept" data-i18n="cta_how"></a>
+    </div>
+  </div>
+
+  <section id="concept">
+    <h2 data-i18n="how_title"></h2>
+    <p data-i18n="how_intro"></p>
+    <ol class="steps">
+      <li><span class="n">1</span><h3 data-i18n="s1_t"></h3><p data-i18n="s1_p"></p></li>
+      <li><span class="n">2</span><h3 data-i18n="s2_t"></h3><p data-i18n="s2_p"></p></li>
+      <li><span class="n">3</span><h3 data-i18n="s3_t"></h3><p data-i18n="s3_p"></p></li>
+    </ol>
+  </section>
+
+  <section id="calculateur">
+    <h2 data-i18n="calc_title"></h2>
+    <p data-i18n="calc_intro"></p>
+    <div class="calc">
+      <div class="fields">
+        <div>
+          <label for="currency" data-i18n="calc_currency"></label>
+          <select id="currency">
+            <option value="CHF">CHF</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="TRY">TRY (₺)</option>
+            <option value="USD">USD ($)</option>
+            <option value="CNY">CNY (¥)</option>
+          </select>
+        </div>
+        <div>
+          <label for="rate" data-i18n="calc_rate"></label>
+          <input id="rate" type="number" min="0" step="0.5" value="1">
+        </div>
+        <div>
+          <label for="km" data-i18n="calc_km"></label>
+          <input id="km" type="number" min="0" step="100" value="25000">
+        </div>
+        <div>
+          <label for="cap"><span data-i18n="calc_cap"></span> (<span id="cap-cur">CHF</span>)</label>
+          <input id="cap" type="number" min="0" step="5" value="50">
+        </div>
+      </div>
+      <label class="check"><input id="nocap" type="checkbox"> <span data-i18n="calc_nocap"></span></label>
+      <div class="result" aria-live="polite">
+        <span id="result-text"></span>
+        <strong id="result-amount"></strong>
+        <span class="eur" id="result-eur"></span>
+      </div>
+      <p class="note" data-i18n="calc_note"></p>
+    </div>
+  </section>
+
+  <section id="soils">
+    <div class="soils-head">
+      <a data-link="soilsUrl" href="#" target="_blank" rel="noopener"><img src="img/soils-logo.png" width="220" height="95" data-i18n-alt="soils_logo_alt" alt="" loading="lazy"></a>
+    </div>
+    <h2 data-i18n="soils_title"></h2>
+    <p data-i18n="soils_ctx"></p>
+    <p data-i18n="soils_p1"></p>
+    <p data-i18n="soils_p2"></p>
+    <h3 data-i18n="soils_why_t"></h3>
+    <p data-i18n="soils_why"></p>
+    <h3 data-i18n="soils_for_t"></h3>
+    <p data-i18n="soils_for_intro"></p>
+    <ul class="for-list">
+      <li data-i18n="soils_for_1"></li><li data-i18n="soils_for_2"></li><li data-i18n="soils_for_3"></li>
+      <li data-i18n="soils_for_4"></li><li data-i18n="soils_for_5"></li>
+    </ul>
+    <p data-i18n="soils_for_rest"></p>
+    <p class="source" data-i18n="src_home"></p>
+    <div class="strip">
+      <img src="img/nohyee-3.jpg" data-i18n-alt="strip1_alt" alt="" loading="lazy">
+      <img src="img/ahmad-1.jpg" data-i18n-alt="strip2_alt" alt="" loading="lazy">
+      <img src="img/akil-3.jpg" data-i18n-alt="strip3_alt" alt="" loading="lazy">
+    </div>
+    <div class="links">
+      <a class="btn primary" href="projets.html" data-i18n="soils_btn_projects"></a>
+      <a class="btn ghost" data-link="soilsUrl" href="#" target="_blank" rel="noopener" data-i18n="link_soils"></a>
+    </div>
+  </section>
+
+  <section id="compteur">
+    <h2 data-i18n="map_title"></h2>
+    <p class="count-line" data-i18n="count_text"></p>
+    <div class="links"><a class="btn ghost" href="carte.html" data-i18n="count_map_btn"></a></div>
+  </section>
+
+  <section id="promesse">
+    <h2 data-i18n="pledge_title"></h2>
+    <p data-i18n="pledge_p1"></p>
+    <p data-i18n="pledge_p2"></p>
+    <div class="btns"><a class="btn primary" id="link-form" data-link="formUrl" href="#" target="_blank" rel="noopener" data-i18n="pledge_btn"></a></div>
+    <p class="note small" data-i18n="pledge_privacy"></p>
+    <iframe id="form-frame" title="Formulaire / Form" hidden loading="lazy"></iframe>
+    <p class="note" id="stats" hidden></p>
+  </section>
+
+  <section id="don-libre">
+    <h2 data-i18n="free_title"></h2>
+    <p data-i18n="free_p"></p>
+    <div class="btns"><a class="btn primary" data-link="potUrl" href="#" target="_blank" rel="noopener" data-i18n="free_btn"></a></div>
+  </section>
+
+  <section id="faq">
+    <h2 data-i18n="faq_title"></h2>
+    <details><summary data-i18n="q8"></summary><p data-i18n="a8"></p><img class="duo" src="img/max-barth.jpg" width="450" height="600" data-i18n-alt="duo_alt" alt="" loading="lazy"></details>
+    <details><summary data-i18n="q9"></summary><p data-i18n="a9"></p></details>
+    <details><summary data-i18n="q1"></summary><p data-i18n="a1"></p></details>
+    <details><summary data-i18n="q10"></summary><p data-i18n="a10"></p></details>
+    <details><summary data-i18n="q7"></summary><p data-i18n="a7"></p></details>
+    <details><summary data-i18n="q2"></summary><p data-i18n="a2"></p></details>
+    <details><summary data-i18n="q3"></summary><p data-i18n="a3"></p></details>
+    <details><summary data-i18n="q6"></summary><p data-i18n="a6"></p></details>
+    <details><summary data-i18n="q11"></summary><p data-i18n="a11"></p></details>
+    <details><summary data-i18n="q12"></summary><p data-i18n="a12"></p></details>
+    <details><summary data-i18n="q4"></summary><p data-i18n="a4"></p></details>
+    <details><summary data-i18n="q5"></summary><p data-i18n="a5"></p></details>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contact_title"></h2>
+    <p data-i18n="contact_p"></p>
+    <div class="links">
+      <a class="btn primary" data-link="potUrl" href="#" target="_blank" rel="noopener" data-i18n="link_pot"></a>
+      <a class="btn ghost" data-link="instaUrl" href="#" target="_blank" rel="noopener" data-i18n="link_insta"></a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap" data-i18n="footer"></div>
+</footer>
+
+<script src="config.js"></script>
+<script src="texts.js"></script>
+<script src="common.js"></script>
+<script src="home.js"></script>
+</body>
+</html>
